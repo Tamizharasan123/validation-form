@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='js-form-validation.css' type='text/css' />
+<script src="sample-registration-form-validation.js"></script>
+</head>
+<body onload="document.registration.userid.focus();">
+<h1>Registration Form</h1>
+<form name='registration' onSubmit="return formValidation();">
+
+<label for="userid">User id:</label>
+<input type="text" name="userid" size="12" /><h1> </h1>
+<label for="passid">Password:</label></li>
+<input type="password" name="passid" size="12" /><h1> </h1>
+<label for="passid"> Confirm Password:</label></li>
+<input type="password" name="passid" size="12" /><h1> </h1>
+<label for="username">Name:</label></li>
+<input type="text" name="username" size="12" /></li><h1> </h1>
+<!DOCTYPE html>
+<html>
+<body>
+    <html>
+<head>
+	<title>jQuery - Find age from DOB</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<style>
+		.error{color: red; }
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('.dob').datepicker({
+				showOn: 'button',
+				showAnim: 'slideDown'
+			});
+			
+			$('#find_age').click(function(){
+				$('.error, .msg').text('');
+				var dob = $('.dob').val();
+				if(dob == ''){
+					$('.error').text('Select DOB!');
+				}else{
+					dobDate = new Date(dob);
+					nowDate = new Date();
+					
+					var diff = nowDate.getTime() - dobDate.getTime();
+					
+					var ageDate = new Date(diff); // miliseconds from epoch
+					var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+					
+					$('.msg').text(age+ ' Years');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	Enter DOB: <input type="text" class="dob" placeholder="mm/dd/yyyy" value="05/16/1987" />
+	<input type="button" id="find_age" value="Find Age" />
+	<p>Your age is: <span class="error"></span><span class="msg"></span></p>
+</body>
+</html>
+Enter your mobile number:
+  <input id="numb">
+  
+  
+  <p id="demo"></p>
+  
+  <script>
+  function myFunction() {
+    // Get the value of the input field with id="numb"
+    let x = document.getElementById("numb").value;
+    // If x is Not a Number or less than one or greater than 10
+    let text;
+    if (isNaN(x) || x=10) {
+      text = "Input not valid";
+    } else {
+      text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+  }
+  </script>
+
+    
+<label for="address">Address:</label></li>
+<textarea name="desc" id="desc"></textarea></li><h1> </h2>
+<label for="country">Country:</label></li>
+<select name="country"><h1> </h1>
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select></li><h1> </h1>
+<label for="zip">ZIP Code:</label></li>
+<input type="text" name="zip" /></li><h1> </h2>
+<label for="email">Email:</label></li>
+<input type="text" name="email" size="12" /></li><h1> </h2>
+    <html>
+        <head>
+        <script LANGUAGE="JavaScript">
+        function ValidateForm(form){
+        ErrorText= "";
+        if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) )
+        {
+        alert ( "Please choose your Gender: Male or Female" );
+        return false;
+        }
+        if (ErrorText= "") { form.submit() }
+        }
+        </script>
+        </head>
+        <body>
+        <form name="feedback" action="#" method=post>
+        Your Gender: <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+
+       
+        </form>
+        </body>
+        </html><h1> </h1>
+<label for="desc">About:</label></li>
+<textarea name="desc" id="desc"></textarea></li><h1> </h2>
+<input type="submit" name="submit" value="Submit" /></li> <input type="reset" value="Reset">
+</ul>
+</form>
+</body>
+</html>
